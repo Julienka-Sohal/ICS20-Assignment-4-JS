@@ -19,8 +19,8 @@ if (navigator.serviceWorker) {
 function myButtonClicked() {
   const iceCreamTop = document.getElementById("topping").value
 
-  const cost = (3.0 + 0.8) * 0.13
-  const plain = 3.0 * 0.13
+  const cost = (3.0 + 0.8) * 1.3
+  const plain = 3.0 * 1.3
 
   if (
     iceCreamTop == "sprinkles" ||
