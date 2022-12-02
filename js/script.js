@@ -10,25 +10,23 @@
  * Check servie worker.
  */
 if (navigator.serviceWorker) {
-  navigator.serviceWorker.register("/ICS2O-Unit5-04-JS/sw.js", {
-    scope: "/ICS2O-Unit5-04-JS/",
+  navigator.serviceWorker.register("/ICS20-Assignment-4-JS/sw.js", {
+    scope: "/ICS20-Assignment-4-JS/",
   })
 }
 
 //process
 function myButtonClicked() {
-  const day = document.getElementById("week").value
-  const typeAge = document.getElementById("typeAge").value
+  const iceCreamTop = document.getElementById("topping").value
 
-  if (
-    day == "Tuesday" ||
-    day == "Thursday" ||
-    (typeAge >= 12 && typeAge <= 25)
-  ) {
-    document.getElementById("weekday-discount").innerHTML =
-      "You are eligible to get a discount!"
+  const overallCost = ( 3.00 + 0.8 ) * 0.13
+  const noToppings = 3.00 * 0.13
+  
+  if (iceCreamTop == "sprinkles" || iceCreamTop == "gummyBears" || iceCreamTop == "chocoChips") {
+    document.getElementById("garnish").innerHTML =
+      "Your total comes to $" + overallCost.fixed(2) + "."
   } else {
-    document.getElementById("weekday-discount").innerHTML =
-      "You are not eligible to get a discount..."
+    document.getElementById("garnish").innerHTML =
+      "Your total comes to $" + noToppings.fixed(2) + "."
   }
 }
