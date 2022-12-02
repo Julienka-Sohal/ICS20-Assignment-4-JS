@@ -19,10 +19,14 @@ if (navigator.serviceWorker) {
 function myButtonClicked() {
   const iceCreamTop = document.getElementById("topping").value
 
-  const overallCost = ( 3.00 + 0.8 ) * 0.13
-  const noToppings = 3.00 * 0.13
-  
-  if (iceCreamTop == "sprinkles" || iceCreamTop == "gummyBears" || iceCreamTop == "chocoChips") {
+  const overallCost = (3.0 + 0.8) * 0.13
+  const noToppings = 3.0 * 0.13
+
+  if (
+    iceCreamTop == "sprinkles" ||
+    iceCreamTop == "gummyBears" ||
+    iceCreamTop == "chocoChips"
+  ) {
     document.getElementById("garnish").innerHTML =
       "Your total comes to $" + overallCost.fixed(2) + "."
   } else {
