@@ -19,7 +19,7 @@ if (navigator.serviceWorker) {
 function myButtonClicked() {
   const iceCreamTop = document.getElementById("topping").value
 
-  const overallCost = (3.0 + 0.8) * 0.13
+  const cost = (3.0 + 0.8) * 0.13
   const noToppings = 3.0 * 0.13
 
   if (
@@ -28,7 +28,7 @@ function myButtonClicked() {
     iceCreamTop == "chocoChips"
   ) {
     document.getElementById("garnish").innerHTML =
-      "Your total comes to $" + overallCost.fixed(2) + "."
+      "Your total comes to $" + cost.fixed(2) + "."
   } else {
     document.getElementById("garnish").innerHTML =
       "Your total comes to $" + noToppings.fixed(2) + "."
