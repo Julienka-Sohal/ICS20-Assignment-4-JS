@@ -24,7 +24,7 @@ function myButtonClicked() {
 
   if (
     iceCreamTop == "sprinkles" ||
-    iceCreamTop == "gummyBears" ||
+    iceCreamTop == "gummyBears" || 
     iceCreamTop == "chocoChips"
   ) {
     document.getElementById("garnish").innerHTML =
