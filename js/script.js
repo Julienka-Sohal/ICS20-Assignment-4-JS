@@ -28,9 +28,9 @@ function myButtonClicked() {
     iceCreamTop == "chocoChips"
   ) {
     document.getElementById("garnish").innerHTML =
-      "Your total comes to $" + cost.fixed(2) + "."
+      "Your total comes to $" + cost.toFixed(2) + "."
   } else {
     document.getElementById("garnish").innerHTML =
-      "Your total comes to $" + plain.fixed(2) + "."
+      "Your total comes to $" + plain.toFixed(2) + "."
   }
 }
